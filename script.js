@@ -6,15 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const itemCountEl = document.querySelector(".todo-footer__count h3");
   const addBtn = document.getElementById("onAdd");
 
-  // Sample todo
-  const initialTodos = [
-    { text: "Complete online JavaScript course", completed: true },
-    { text: "Jog around the park 3x", completed: false },
-    { text: "10 minutes meditation", completed: false },
-    { text: "Read for 1 hour", completed: false },
-    { text: "Pick up groceries", completed: false },
-    { text: "Complete Todo App on Frontend Mentor", completed: false }
-  ];
+//   const initialTodos = [
+//     { text: "Complete online JavaScript course", completed: true },
+//     { text: "Jog around the park 3x", completed: false },
+//     { text: "10 minutes meditation", completed: false },
+//     { text: "Read for 1 hour", completed: false },
+//     { text: "Pick up groceries", completed: false },
+//     { text: "Complete Todo App on Frontend Mentor", completed: false }
+//   ];
 
   // Filter buttons
   const filterAllBtns = document.querySelectorAll(".filter-all__btn");
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     deleteBtn.className = "todo-item__delete";
     deleteBtn.innerHTML = `<img src="./assets/images/icon-cross.svg" alt="Delete">`;
 
-    // Toggle completion status when clicking checkbox
+    // Toggle completion  clicking checkbox
     checkbox.addEventListener("click", function () {
       li.classList.toggle("completed");
       checkbox.classList.toggle("checked");
@@ -208,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Get the element to insert after based on mouse position
+    // Get the element to insert  based on mouse position
     function getDragAfterElement(container, y) {
       const draggableElements = [...container.querySelectorAll(".todo-item:not(.dragging)")];
       
@@ -224,10 +223,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }, { offset: Number.NEGATIVE_INFINITY }).element;
     }
 
-    // Initialize draggable items
     makeDraggable();
 
-    // Make new items draggable when they're added
+    // Make new items draggable 
     const observer = new MutationObserver(mutations => {
       mutations.forEach(mutation => {
         if (mutation.addedNodes.length) {
@@ -239,7 +237,6 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(todoList, { childList: true });
   }
 
-  // Initialize the application
   initializeTodos();
   enableDragAndDrop();
 });
