@@ -6,14 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const itemCountEl = document.querySelector(".todo-footer__count h3");
   const addBtn = document.getElementById("onAdd");
 
-//   const initialTodos = [
-//     { text: "Complete online JavaScript course", completed: true },
-//     { text: "Jog around the park 3x", completed: false },
-//     { text: "10 minutes meditation", completed: false },
-//     { text: "Read for 1 hour", completed: false },
-//     { text: "Pick up groceries", completed: false },
-//     { text: "Complete Todo App on Frontend Mentor", completed: false }
-//   ];
+
 
   // Filter buttons
   const filterAllBtns = document.querySelectorAll(".filter-all__btn");
