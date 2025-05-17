@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo App</title>
+</head>
+<body class="dark-mode">
+    <section id="container">
+        <main id="main-content">
+            <div class="todo-app__title">
+                <h1>TODO</h1>
+                <button id="mode-toggle">
+                    <img id="mode-icon" src="./assets/images/icon-sun.svg" alt="light">
+                </button>
+            </div>
+
+            <form class="todo-app__form">
+                <span id="onAdd" class="todo-app__radio"></span>
+                <input id="todo-input" type="text" placeholder="Create a new todo..." class="todo-app__form-input">
+            </form>
+
+            <div class="todo-app__hero">
+                <ul class="todo-list" id="todo-list">
+                    <!-- Todo items will be dynamically added here -->
+                </ul>
+
+                <div class="todo-footer">
+                    <div class="todo-footer__count">
+                        <h3>0 items left</h3>
+                    </div>
+
+                    <div class="todo-footer__filter">
+                        <button class="filter-all__btn filter-active">All</button>
+                        <button class="filter-active__btn">Active</button>
+                        <button class="filter-completed__btn">Completed</button>
+                    </div>
+
+                    <div class="todo-completed">
+                        <h3>Clear Completed</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="todo-app__drag-info">
+                <p>Drag and drop to reorder list</p>
+            </div>
+
+            <div class="todo-footer__filter mobile-filter">
+                <button class="filter-all__btn filter-active">All</button>
+                <button class="filter-active__btn">Active</button>
+                <button class="filter-completed__btn">Completed</button>
+            </div>
+        </main>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
